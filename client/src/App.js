@@ -12,7 +12,9 @@ function App() {
         Backpacker's Guide Through Worldwide Textile Water Pollution
       </h1>
       <NavBar />
-      <Carousel />
+      <div className="carousel-slider">
+        <Carousel />
+      </div>
 
       {/* <div>
         just left map here temporarily
