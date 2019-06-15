@@ -1,6 +1,8 @@
 DJANGO_SETTINGS_MODULE=Hackathon.settings
 POSTGRES_USER=postgres
-DB_USER=rest_review
-DB_DATABASE=rest_review
-DB_PASSWORD=rest_review
+DB_USER=hackathon
+DB_DATABASE=hackathon
+DB_PASSWORD=hackathon
 REDIS_PASSWORD=redis
+INSTAGRAM_CLIENT_ID=b0bf79e266ac45fbadc894d0ef120162
+INSTAGRAM_CLIENT_SECRET=1d71add5bd634acab78b92fd6593ce59
