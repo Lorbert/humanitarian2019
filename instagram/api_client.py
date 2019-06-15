@@ -31,17 +31,17 @@ class InstagramApiClient:
                     "created_time": "1296710327",
                     "images": {
                         "low_resolution": {
-                            "url": "http://distillery.s3.amazonaws.com/media/2011/02/02/6ea7baea55774c5e81e7e3e1f6e791a7_6.jpg",
+                            "url": "http://media-cdn.tripadvisor.com/media/photo-s/01/40/07/74/nadi.jpg",
                             "width": 306,
                             "height": 306
                         },
                         "thumbnail": {
-                            "url": "http://distillery.s3.amazonaws.com/media/2011/02/02/6ea7baea55774c5e81e7e3e1f6e791a7_5.jpg",
+                            "url": "http://media-cdn.tripadvisor.com/media/photo-s/01/40/07/74/nadi.jpg",
                             "width": 150,
                             "height": 150
                         },
                         "standard_resolution": {
-                            "url": "http://distillery.s3.amazonaws.com/media/2011/02/02/6ea7baea55774c5e81e7e3e1f6e791a7_7.jpg",
+                            "url": "http://media-cdn.tripadvisor.com/media/photo-s/01/40/07/74/nadi.jpg",
                             "width": 612,
                             "height": 612
                         }
