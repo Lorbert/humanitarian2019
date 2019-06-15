@@ -1,43 +1,41 @@
-import axios from 'axios'
+import axios from "axios";
 
 const service = axios.create({
-  baseURL: process.env.NODE_ENV === 'production' ? '/api' : 'http://localhost:8000/api/v1/instagram_posts',
+  baseURL:
+    process.env.NODE_ENV === "production"
+      ? "/api"
+      : "http://localhost:8000/api/v1/instagram_posts"
   // withCredentials: true
-})
+});
 
 const errHandler = err => {
-  console.error(err)
+  console.error(err);
   if (err.response && err.response.data) {
-    console.error("API response", err.response.data)
-    throw err.response.data.message
+    console.error("API response", err.response.data);
+    throw err.response.data.message;
   }
-  throw err
-}
+  throw err;
+};
 
 export default {
   service: service,
 
   // This method is synchronous and returns true or false
   // To know if the user is connected, we just check if we have a value for localStorage.getItem('user')
-//   isLoggedIn() {
-//     return localStorage.getItem('user') != null
-//   },
+  //   isLoggedIn() {
+  //     return localStorage.getItem('user') != null
+  //   },
 
-
-
-  getInfos(){
+  getInfos() {
     return service
-            .get("/")
-            .then(res => {
-              return res.data
-            })
-            .catch(errHandler)
-  },
-
-
+      .get("/")
+      .then(res => {
+        return res.data;
+      })
+      .catch(errHandler);
+  }
 
   // personal applicated misson
-
 
   // addPicture(file) {
   //   const formData = new FormData()
@@ -51,4 +49,4 @@ export default {
   //     .then(res => res.data)
   //     .catch(errHandler)
   // },
-}
+};
