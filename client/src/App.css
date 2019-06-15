@@ -111,3 +111,20 @@
   opacity: 0 !important;
   color: white !important;
 }
+
+.outer-div {
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: stretch;
+	align-content: stretch;
+}
+
+.sub-div{
+  border:1px solid black;
+  margin:0;
+  padding:0;
+  width:25%;
+  height:100%;
+}
