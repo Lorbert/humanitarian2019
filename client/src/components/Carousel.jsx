@@ -38,29 +38,32 @@ console.log(curid)
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 3000,
+      arrows: false,
+      // autoplay: true,
+      // autoplaySpeed: 3000,
       pauseOnDotsHover: true,
       pauseOnFocus: true,
       pauseOnHover: true
     };
+
     return (
       <div>
          {this.state.curTag === 0 &&(
+      
+
           <Slider {...settings}>
-            <div >
-              <h3 id="pic-1" onClick={(e) => this.toggle(e)}>1</h3>
-              {/* <img/> */}
-            </div>
-            <div >
-              <h3 id="pic-2" onClick={(e) => this.toggle(e)}>2</h3>
-            </div>
-            <div >
-              <h3 id="pic-3" onClick={(e) => this.toggle(e)}>3</h3>
-            </div>
-            <div >
-              <h3 id="pic-4" onClick={(e) => this.toggle(e)}>4</h3>
-            </div>
+          <div className="carousel-preview1" >
+            <h3 id="pic-1" onClick={(e) => this.toggle(e)}>1</h3>
+          </div>
+          <div className="carousel-preview2" >
+            <h3 id="pic-2" onClick={(e) => this.toggle(e)}>2</h3>
+          </div>
+          <div className="carousel-preview3" >
+            <h3 id="pic-3" onClick={(e) => this.toggle(e)}>3</h3>
+          </div>
+          <div className="carousel-preview4" >
+            <h3 id="pic-4" onClick={(e) => this.toggle(e)}>4</h3>
+          </div>
           </Slider>
          )}
 
@@ -97,6 +100,7 @@ console.log(curid)
       </div>
       
       
+
     );
   }
 }
