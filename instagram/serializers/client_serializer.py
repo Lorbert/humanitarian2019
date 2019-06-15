@@ -31,7 +31,6 @@ class ClientSerializer:
             self.errors['caption'] = 'Caption needs to be in the response'
         if len(self.errors.keys()) < 1:
             self._is_valid = True
-        print(self.errors)
         self._is_valid_called = True
         return self._is_valid
 

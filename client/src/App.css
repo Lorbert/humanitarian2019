@@ -4,7 +4,7 @@
 
 .App {
   text-align: center;
-  background-image: url('./images/bg-patterned.png');
+  /* background-image: url('./images/bg-patterned.png'); */
 }
 
 .App-logo {
@@ -55,43 +55,43 @@
 }
 
 .carousel-preview1 {
-  background-image: url('./images/doggy1.jpeg');
+  background-image: url('./images/waterpollution.png');
   border-style: solid;
   border-radius: 3px;
   border-color: #444444;
   background-color: lightsalmon;
-  max-width: 65%;
-  line-height: 10rem;
+  max-width: 80%;
+  line-height: 20rem;
   background-size: cover;
 }
 .carousel-preview2 {
-  background-image: url('./images/doggy2.jpg');
+  background-image: url('./images/exampleleaflet.png');
   border-style: solid;
   border-radius: 3px;
   border-color: #444444;
   background-color: lightsalmon;
-  max-width: 65%;
-  line-height: 10rem;
+  max-width: 80%;
+  line-height: 20rem;
   background-size: cover;
 }
 .carousel-preview3 {
-  background-image: url('./images/doggy3.png');
+  background-image: url('./images/cadmiumsticks.png');
   border-style: solid;
   border-radius: 3px;
   border-color: #444444;
   background-color: lightsalmon;
-  max-width: 65%;
-  line-height: 10rem;
+  max-width: 80%;
+  line-height: 20rem;
   background-size: cover;
 }
 .carousel-preview4 {
-  background-image: url('./images/doggy4.jpg');
+  background-image: url('./images/participation.png');
   border-style: solid;
   border-radius: 3px;
   border-color: #444444;
   background-color: lightsalmon;
-  max-width: 65%;
-  line-height: 10rem;
+  max-width: 85%;
+  line-height: 20rem;
   background-size: cover;
 }
 
