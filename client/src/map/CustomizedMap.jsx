@@ -32,7 +32,7 @@ export default class CustomizedMap extends React.Component {
           });
           resData.map((cur, i) => {
             let marker = L.marker([cur["latitude"], cur["longitude"]]).addTo(map);
-            marker.bindPopup(`<div>insName: ${cur.insta_username} </div><div>caption: ${cur.insta_caption}</div><img src=${cur.insta_image_link} />`).openPopup();
+            marker.bindPopup(`<div>insName: ${cur.insta_username} </div><div>caption: ${cur.insta_caption}</div><img width="200" height="130" src=${cur.insta_image_link} />`).openPopup();
           })
           return this.setState({
             map: map
