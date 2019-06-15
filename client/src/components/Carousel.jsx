@@ -9,25 +9,26 @@ class Carousel extends Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 3000,
+      arrows: false,
+      //autoplay: true,
+      //autoplaySpeed: 3000,
       pauseOnDotsHover: true,
       pauseOnFocus: true,
       pauseOnHover: true
     };
+
     return (
       <Slider {...settings}>
-        <div>
+        <div className="carousel-preview1">
           <h3>1</h3>
-          <img />
         </div>
-        <div>
+        <div className="carousel-preview2">
           <h3>2</h3>
         </div>
-        <div>
+        <div className="carousel-preview3">
           <h3>3</h3>
         </div>
-        <div>
+        <div className="carousel-preview4">
           <h3>4</h3>
         </div>
       </Slider>
