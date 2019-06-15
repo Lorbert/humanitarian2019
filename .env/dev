@@ -1,0 +1,5 @@
+DJANGO_SETTINGS_MODULE=Hackathon.settings
+POSTGRES_USER=postgres
+DB_USER=rest_review
+DB_DATABASE=rest_review
+DB_PASSWORD=rest_review
