@@ -7,29 +7,53 @@ services:
     - postgres_data:/var/lib/postgresql/data/
     build: ./db
     ports:
-      - "5432:5432"
+    - "5432:5432"
     expose:
-      - 5432
+    - 5432
     env_file:
-      - ./.env/dev
+    - ./.env/dev
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 5s
       timeout: 5s
       retries: 3
+  redis:
+    image: redis:alpine
+    env_file:
+    - ./.env/dev
+    command: ["redis-server", "--appendonly", "yes", "--requirepass", "redis"]
+    ports:
+    - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli","ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+  flower:
+    image: mher/flower
+    command: ["flower"]
+    env_file:
+    - ./.env/dev
+    depends_on:
+    - redis
+    links:
+    - redis
+    ports:
+    - 5555:5555
   app:
     build: .
     entrypoint: ["/bin/sh", "./entrypoint.sh"]
     env_file:
-      - ./.env/dev
+    - ./.env/dev
     volumes:
-      - .:/code
+    - .:/code
     ports:
-      - "8000:8000"
+    - "8000:8000"
     external_links:
-      - db
+    - db
     depends_on:
-      - db
+    - db
+    - redis
   client:
     build:
       context: ./client
@@ -37,12 +61,12 @@ services:
     entrypoint: ["/bin/sh", "/app/run.sh"]
     command: start
     env_file:
-      - ./.env/dev
+    - ./.env/dev
     volumes:
-      - ./client:/app
+    - ./client:/app
     ports:
-      - "3000:3000"
-      - "35729:35729"
+    - "3000:3000"
+    - "35729:35729"
 
 volumes:
   postgres_data:
