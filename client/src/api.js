@@ -1,8 +1,8 @@
 import axios from 'axios'
 
 const service = axios.create({
-  baseURL: process.env.NODE_ENV === 'production' ? '/api' : 'http://localhost:8000',
-  withCredentials: true
+  baseURL: process.env.NODE_ENV === 'production' ? '/api' : 'http://localhost:8000/api/v1/instagram_posts',
+  // withCredentials: true
 })
 
 const errHandler = err => {

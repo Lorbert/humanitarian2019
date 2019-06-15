@@ -1,11 +1,9 @@
 from __future__ import absolute_import
 
-import requests
-
 from Hackathon.celery import app
+from instagram.tasks import refresh_instagram_posts_runner
 
 
 @app.task(bind=True)
 def refresh_instagram_posts(self):
-    print("INSTA POSTS REFGRESHED")
-    return False
+    return refresh_instagram_posts_runner()
