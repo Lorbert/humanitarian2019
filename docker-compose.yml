@@ -1,0 +1,48 @@
+version: '3'
+
+services:
+  db:
+    image: database
+    volumes:
+    - postgres_data:/var/lib/postgresql/data/
+    build: ./db
+    ports:
+      - "5432:5432"
+    expose:
+      - 5432
+    env_file:
+      - ./.env/dev
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 3
+  app:
+    build: .
+    entrypoint: ["/bin/sh", "./entrypoint.sh"]
+    env_file:
+      - ./.env/dev
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    external_links:
+      - db
+    depends_on:
+      - db
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    entrypoint: ["/bin/sh", "/app/run.sh"]
+    command: start
+    env_file:
+      - ./.env/dev
+    volumes:
+      - ./client:/app
+    ports:
+      - "3000:3000"
+      - "35729:35729"
+
+volumes:
+  postgres_data:
