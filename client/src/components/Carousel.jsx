@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
+import CustomizedMap from "./../map/CustomizedMap";
+import previous from "./../images/previous.png"
 
 class Carousel extends Component {
   constructor(props){
@@ -69,7 +71,9 @@ console.log(curid)
 
          {this.state.curTag === 1 && (
            <div>
-             <div onClick={(e)=>this.goBack(e)}>go back</div>
+             <div onClick={(e)=>this.goBack(e)}>
+              <img src={previous} width="20" height="20"/>
+               go back</div>
              111111
 
            </div>
@@ -77,14 +81,20 @@ console.log(curid)
 
         {this.state.curTag === 2 && (
            <div>
-             <div onClick={(e)=>this.goBack(e)}>go back</div>
-             22222
+             <div onClick={(e)=>this.goBack(e)}>
+              <img src={previous} width="20" height="20"/>go back</div>
+             <div>
+                <CustomizedMap />
+             </div>
           </div>
         )}
 
         {this.state.curTag === 3 && (
            <div>
-             <div onClick={(e)=>this.goBack(e)}>go back</div>
+             <div onClick={(e)=>this.goBack(e)}>
+             <img src={previous} width="20" height="20"/> 
+               go back
+            </div>
              33333
              
           </div>
@@ -92,7 +102,10 @@ console.log(curid)
 
         {this.state.curTag === 4 && (
            <div>
-             <div onClick={(e)=>this.goBack(e)}>go back</div>
+             <div onClick={(e)=>this.goBack(e)}>
+             <img src={previous} width="20" height="20"/>
+               go back
+            </div>
              444444
              
           </div>

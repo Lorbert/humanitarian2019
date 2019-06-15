@@ -13,10 +13,10 @@ function App() {
         <Carousel />
       </div>
 
-      <div>
+      {/* <div>
         just left map here temporarily
         <CustomizedMap />
-      </div>
+      </div> */}
     </div>
   );
 }
