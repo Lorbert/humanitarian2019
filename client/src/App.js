@@ -13,12 +13,11 @@ function App() {
       </h1>
       <NavBar />
       <Carousel />
-      <PollutionMap />
 
-      <div>
+      {/* <div>
         just left map here temporarily
         <CustomizedMap />
-      </div>
+      </div> */}
     </div>
   );
 }
