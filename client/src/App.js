@@ -1,4 +1,5 @@
 import React from "react";
+import CustomizedMap from "./map/CustomizedMap";
 import "./App.css";
 import PollutionMap from "./components/PollutionMap";
 import NavBar from "./components/NavBar";
@@ -12,6 +13,12 @@ function App() {
       </h1>
       <NavBar />
       <Carousel />
+      <PollutionMap />
+
+      <div>
+        just left map here temporarily
+        <CustomizedMap />
+      </div>
     </div>
   );
 }
