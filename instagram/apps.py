@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class PhotosConfig(AppConfig):
+class InstagramConfig(AppConfig):
     name = 'instagram'
