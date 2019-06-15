@@ -4,7 +4,6 @@ import redis as redis
 import requests
 from urllib.parse import quote
 
-from django.http import JsonResponse
 from django.shortcuts import redirect
 
 
@@ -40,7 +39,4 @@ def handle_redirect(request):
     print(auth_response)
     r = redis.Redis(host='redis', port=6379, db=1, password=os.getenv('REDIS_PASSWORD', ''))
     r.set('INSTAGRAM_API_TOKEN', auth_response.get('access_token'), ex=3600)
-    return JsonResponse({
-        'success': True,
-        'message': 'Instagram Login Successful'
-    })
+    return redirect('http://localhost:3000')
