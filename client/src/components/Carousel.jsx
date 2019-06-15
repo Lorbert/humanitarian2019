@@ -19,6 +19,7 @@ class Carousel extends Component {
       <Slider {...settings}>
         <div>
           <h3>1</h3>
+          <img />
         </div>
         <div>
           <h3>2</h3>
