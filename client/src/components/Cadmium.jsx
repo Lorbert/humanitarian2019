@@ -24,7 +24,7 @@ export default class Cadmium extends Component {
         <a
           className="link-cadmium-tubes"
           href="http://www.home-health-chemistry.com/Cadmium-Tubes.html"
-          style={{ fontWeight: "bold" }}
+          style={{ fontWeight: "bold", fontStyle: "italic" }}
         >
           Order Cadmium Test Tubes here
         </a>

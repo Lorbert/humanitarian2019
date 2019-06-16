@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import CustomizedMap from "./../map/CustomizedMap";
 import Aqueduct from "./Aqueduct";
 import Cadmium from "./Cadmium";
+import Participation from "./Participation";
 import previous from "./../images/previous.png";
 
 class Carousel extends Component {
@@ -146,7 +147,9 @@ class Carousel extends Component {
               />
               GO BACK
             </div>
-            <div className="slide-topic-four">444444</div>
+            <div className="slide-topic-four">
+              <Participation />
+            </div>
           </div>
         )}
       </div>

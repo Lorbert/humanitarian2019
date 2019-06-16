@@ -169,3 +169,14 @@
   font-size: 30px;
   padding: 20px 0 20px 0;
 }
+
+.participation {
+  padding: 20px 0 20px 0;
+}
+
+.ul.participation-list {
+  list-style-type: circle;
+} 
+.participation-list {
+  font-size: 20px;
+}
