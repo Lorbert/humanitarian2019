@@ -1,36 +1,36 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import CustomizedMap from "./../map/CustomizedMap";
-import previous from "./../images/previous.png"
+import previous from "./../images/previous.png";
 
 class Carousel extends Component {
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
-      curTag:0
-    }
+      curTag: 0
+    };
   }
 
-  toggle(e){
+  toggle(e) {
     e.preventDefault();
     e.stopPropagation();
-    console.log(e)
-    let curid = parseInt(e.target.id.split("-")[1])
-console.log(curid)
+    console.log(e);
+    let curId = parseInt(e.target.id.split("-")[1]);
+    //console.log(curId)
     this.setState({
-      curTag:curid
-    })
+      curTag: curId
+    });
   }
 
-  goBack(e){
+  goBack(e) {
     e.preventDefault();
     e.stopPropagation();
-    console.log(e)
-    // let curid = parseInt(e.target.id.split("-")[1])
+    console.log(e);
+    // let curId = parseInt(e.target.id.split("-")[1])
 
     this.setState({
-      curTag:0
-    })
+      curTag: 0
+    });
   }
 
   render() {
@@ -50,70 +50,73 @@ console.log(curid)
 
     return (
       <div>
-         {this.state.curTag === 0 &&(
-      
-
+        {this.state.curTag === 0 && (
           <Slider {...settings}>
-          <div className="carousel-preview1" >
-            <h3 id="pic-1" onClick={(e) => this.toggle(e)}>1</h3>
-          </div>
-          <div className="carousel-preview2" >
-            <h3 id="pic-2" onClick={(e) => this.toggle(e)}>2</h3>
-          </div>
-          <div className="carousel-preview3" >
-            <h3 id="pic-3" onClick={(e) => this.toggle(e)}>3</h3>
-          </div>
-          <div className="carousel-preview4" >
-            <h3 id="pic-4" onClick={(e) => this.toggle(e)}>4</h3>
-          </div>
+            <div className="carousel-preview1">
+              <h3 id="pic-1" onClick={e => this.toggle(e)}>
+                1
+              </h3>
+            </div>
+            <div className="carousel-preview2">
+              <h3 id="pic-2" onClick={e => this.toggle(e)}>
+                2
+              </h3>
+            </div>
+            <div className="carousel-preview3">
+              <h3 id="pic-3" onClick={e => this.toggle(e)}>
+                3
+              </h3>
+            </div>
+            <div className="carousel-preview4">
+              <h3 id="pic-4" onClick={e => this.toggle(e)}>
+                4
+              </h3>
+            </div>
           </Slider>
-         )}
+        )}
 
-         {this.state.curTag === 1 && (
-           <div>
-             <div onClick={(e)=>this.goBack(e)}>
-              <img src={previous} width="20" height="20"/>
-               go back</div>
-             111111
-
-           </div>
-         )}
+        {this.state.curTag === 1 && (
+          <div>
+            <div onClick={e => this.goBack(e)}>
+              <img src={previous} width="20" height="20" />
+              go back
+            </div>
+            111111
+          </div>
+        )}
 
         {this.state.curTag === 2 && (
-           <div>
-             <div onClick={(e)=>this.goBack(e)}>
-              <img src={previous} width="20" height="20"/>go back</div>
-             <div>
-                <CustomizedMap />
-             </div>
+          <div>
+            <div onClick={e => this.goBack(e)}>
+              <img src={previous} width="20" height="20" />
+              go back
+            </div>
+            <div>
+              <CustomizedMap />
+            </div>
           </div>
         )}
 
         {this.state.curTag === 3 && (
-           <div>
-             <div onClick={(e)=>this.goBack(e)}>
-             <img src={previous} width="20" height="20"/> 
-               go back
+          <div>
+            <div onClick={e => this.goBack(e)}>
+              <img src={previous} width="20" height="20" />
+              go back
             </div>
-             33333
-             
+            33333
           </div>
         )}
 
         {this.state.curTag === 4 && (
-           <div>
-             <div onClick={(e)=>this.goBack(e)}>
-             <img src={previous} width="20" height="20"/>
-               go back
+          <div>
+            <div onClick={e => this.goBack(e)}>
+              <img src={previous} width="20" height="20" />
+              go back
             </div>
-             444444
-             
+            444444
           </div>
         )}
       </div>
-      
-      
-
     );
   }
 }
