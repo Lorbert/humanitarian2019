@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import CustomizedMap from "./../map/CustomizedMap";
+import Aqueduct from "./Aqueduct";
+import Cadmium from "./Cadmium";
 import previous from "./../images/previous.png";
 
 class Carousel extends Component {
@@ -87,7 +89,9 @@ class Carousel extends Component {
               />
               GO BACK
             </div>
-            111111
+            <div className="slide-topic-one">
+              <Aqueduct />
+            </div>
           </div>
         )}
 
@@ -103,7 +107,10 @@ class Carousel extends Component {
               />
               GO BACK
             </div>
-            <div>
+            <div className="slide-topic-two">
+              <div className="description-instamap">
+                <h3>Data on water pollution collected by you!</h3>
+              </div>
               <CustomizedMap />
             </div>
           </div>
@@ -121,7 +128,9 @@ class Carousel extends Component {
               />
               GO BACK
             </div>
-            33333
+            <div className="slide-topic-three">
+              <Cadmium />
+            </div>
           </div>
         )}
 
@@ -137,7 +146,7 @@ class Carousel extends Component {
               />
               GO BACK
             </div>
-            444444
+            <div className="slide-topic-four">444444</div>
           </div>
         )}
       </div>
