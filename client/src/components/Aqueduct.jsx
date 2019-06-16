@@ -6,9 +6,6 @@ export default class Aqueduct extends Component {
   render() {
     return (
       <div>
-        {/* <a href="https://www.wri.org/our-work/project/aqueduct/">
-          <img className="institute-logo" src={institutelogo} alt="" />
-        </a> */}
         <h3>Aqueduct Water Risk Atlas</h3>
         <p>
           Awareness around the physical, regulatory, and reputational water
