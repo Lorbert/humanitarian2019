@@ -10,31 +10,34 @@ class Carousel extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      curTag: 0
+      curTag: 0,
+      preSlide: 0
     };
   }
 
   toggle(e) {
     e.preventDefault();
     e.stopPropagation();
-    console.log(e);
-    let curId = parseInt(e.target.id.split("-")[1]);
-    //console.log(curId)
+    // console.log(e)
+    let curid = parseInt(e.target.id.split("-")[1]);
+    // console.log(curid)
+
     this.setState({
-      curTag: curId
+      curTag: curid
     });
   }
 
   goBack(e) {
     e.preventDefault();
     e.stopPropagation();
-    console.log(e);
-    // let curId = parseInt(e.target.id.split("-")[1])
-
+    let preTag = this.state.curTag;
     this.setState({
-      curTag: 0
+      curTag: 0,
+      preSlide: preTag - 1
     });
   }
+
+  addClass() {}
 
   render() {
     var settings = {
@@ -43,6 +46,7 @@ class Carousel extends Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
+      initialSlide: this.state.preSlide,
       arrows: false,
       autoplay: true,
       autoplaySpeed: 5000,
