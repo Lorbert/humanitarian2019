@@ -5,6 +5,7 @@ import Aqueduct from "./Aqueduct";
 import Cadmium from "./Cadmium";
 import Participation from "./Participation";
 import previous from "./../images/previous.png";
+import instalogo from "../images/instalogo.png";
 
 class Carousel extends Component {
   constructor(props) {
@@ -115,12 +116,17 @@ class Carousel extends Component {
             <div className="slide-topic-two">
               <div className="description-instamap">
                 <h3>Data on water pollution collected by you!</h3>
-                <a
-                  href={"http://localhost:8000/login"}
-                  className={"btn btn-primary"}
-                >
-                  Login with Instagram
-                </a>
+                <div className="insta-login">
+                  <p>Login with Instagram:</p>
+                  <a href="http://localhost:8000/login">
+                    <img
+                      className="aqueduct-logo"
+                      src={instalogo}
+                      style={{ width: "4%", height: "4%" }}
+                      alt=""
+                    />
+                  </a>
+                </div>
               </div>
               <CustomizedMap />
             </div>

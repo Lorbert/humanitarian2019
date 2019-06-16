@@ -170,6 +170,14 @@
 .description-instamap {
   padding: 10px;
 }
+.description-instamap a {
+  padding: 5px;
+}
+/* .insta-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
 
 .link-cadmium-tubes {
   font-size: 30px;
