@@ -29,6 +29,8 @@ class ClientSerializer:
         if ('caption' not in self.client_data
                 or 'text' not in self.client_data['caption']):
             self.errors['caption'] = 'Caption needs to be in the response'
+        if 'tags' not in self.client_data:
+            self.errors['tags'] = 'Tags needs to be in the response'
         if len(self.errors.keys()) < 1:
             self._is_valid = True
         self._is_valid_called = True
@@ -41,15 +43,16 @@ class ClientSerializer:
         if not self._is_valid:
             print('Response is not valid')
             return
-        Post.objects.update_or_create(
-            insta_id=self.client_data['id'],
-            defaults={
-                'latitude': self.client_data['location']['latitude'],
-                'longitude': self.client_data['location']['longitude'],
-                'insta_username': self.client_data['user']['username'],
-                'insta_link': self.client_data['link'],
-                'insta_image_link': self.client_data['images']['standard_resolution']['url'],
-                'insta_caption': self.client_data['caption']['text'],
-            }
-        )
+        if isinstance(self.client_data['tags'], list) and 'stoptextilepollution' in self.client_data['tags']:
+            Post.objects.update_or_create(
+                insta_id=self.client_data['id'],
+                defaults={
+                    'latitude': self.client_data['location']['latitude'],
+                    'longitude': self.client_data['location']['longitude'],
+                    'insta_username': self.client_data['user']['username'],
+                    'insta_link': self.client_data['link'],
+                    'insta_image_link': self.client_data['images']['standard_resolution']['url'],
+                    'insta_caption': self.client_data['caption']['text'],
+                }
+            )
         print('saved post with link', self.client_data['link'])

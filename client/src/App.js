@@ -1,5 +1,4 @@
 import React from "react";
-import CustomizedMap from "./map/CustomizedMap";
 import "./App.css";
 import Description from "./components/Description";
 import Carousel from "./components/Carousel";
