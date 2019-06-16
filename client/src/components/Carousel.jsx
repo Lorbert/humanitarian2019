@@ -110,6 +110,7 @@ class Carousel extends Component {
             <div className="slide-topic-two">
               <div className="description-instamap">
                 <h3>Data on water pollution collected by you!</h3>
+                <a href={"http://localhost:8000/login"} className={"btn btn-primary"}>Login with Instagram</a>
               </div>
               <CustomizedMap />
             </div>
