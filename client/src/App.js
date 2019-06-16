@@ -12,11 +12,6 @@ function App() {
       <div className="carousel-slider">
         <Carousel />
       </div>
-
-      {/* <div>
-        just left map here temporarily
-        <CustomizedMap />
-      </div> */}
     </div>
   );
 }

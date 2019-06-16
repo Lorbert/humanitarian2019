@@ -19,7 +19,6 @@ export default class CustomizedMap extends React.Component {
     setTimeout(() => {
       api.getInfos()
          .then(resData => {
-            console.log(resData)
             var center = [resData[0]["latitude"], resData[0]["longitude"]];
             var map = L.map('map', {
               minZoom: 2,
@@ -28,7 +27,6 @@ export default class CustomizedMap extends React.Component {
               layers: [L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'})],
               attributionControl: false,
               center:center,
-              // marker:marker,
           });
           resData.map((cur, i) => {
             let marker = L.marker([cur["latitude"], cur["longitude"]]).addTo(map);
@@ -42,6 +40,6 @@ export default class CustomizedMap extends React.Component {
   }
 
   render() {
-    return <div id="map" style={{ height: 300 }} />;
+    return <div id="map" style={{ height: 500 }} />;
   }
 }
