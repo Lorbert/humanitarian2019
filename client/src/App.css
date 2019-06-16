@@ -128,3 +128,14 @@
   width:25%;
   height:100%;
 }
+
+.all-previous {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  margin: 10px;
+}
+
+.previous-icon {
+  padding: 5px;
+}

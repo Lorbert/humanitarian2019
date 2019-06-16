@@ -77,9 +77,15 @@ class Carousel extends Component {
 
         {this.state.curTag === 1 && (
           <div>
-            <div onClick={e => this.goBack(e)}>
-              <img src={previous} width="20" height="20" />
-              go back
+            <div className="all-previous" onClick={e => this.goBack(e)}>
+              <img
+                className="previous-icon"
+                src={previous}
+                width="20"
+                height="20"
+                alt=""
+              />
+              GO BACK
             </div>
             111111
           </div>
@@ -87,9 +93,15 @@ class Carousel extends Component {
 
         {this.state.curTag === 2 && (
           <div>
-            <div onClick={e => this.goBack(e)}>
-              <img src={previous} width="20" height="20" />
-              go back
+            <div className="all-previous" onClick={e => this.goBack(e)}>
+              <img
+                className="previous-icon"
+                src={previous}
+                width="20"
+                height="20"
+                alt=""
+              />
+              GO BACK
             </div>
             <div>
               <CustomizedMap />
@@ -99,9 +111,15 @@ class Carousel extends Component {
 
         {this.state.curTag === 3 && (
           <div>
-            <div onClick={e => this.goBack(e)}>
-              <img src={previous} width="20" height="20" />
-              go back
+            <div className="all-previous" onClick={e => this.goBack(e)}>
+              <img
+                className="previous-icon"
+                src={previous}
+                width="20"
+                height="20"
+                alt=""
+              />
+              GO BACK
             </div>
             33333
           </div>
@@ -109,9 +127,15 @@ class Carousel extends Component {
 
         {this.state.curTag === 4 && (
           <div>
-            <div onClick={e => this.goBack(e)}>
-              <img src={previous} width="20" height="20" />
-              go back
+            <div className="all-previous" onClick={e => this.goBack(e)}>
+              <img
+                className="previous-icon"
+                src={previous}
+                width="20"
+                height="20"
+                alt=""
+              />
+              GO BACK
             </div>
             444444
           </div>
